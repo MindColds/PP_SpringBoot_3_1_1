@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CREATEUSER</title>
+</head>
+<body>
+    <h2>Edit User</h2>
+    <form method="post" th:action="@{/createUser}" th:object="${user}">
+        <table th:border="2">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" th:field="${user.name}"/></td>
+            </tr>
+            <br>
+            <tr>
+                <td>Patronim:</td>
+                <td><input type="text" th:field="${user.patronim}"/></td>
+            </tr>
+            <br>
+            <tr>
+                <td>Surname:</td>
+                <td><input type="text" th:field="${user.surname}"/></td>
+            </tr>
+            <br>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" th:field="${user.age}"/></td>
+            </tr>
+            <br>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" th:field="${user.email}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Save"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
